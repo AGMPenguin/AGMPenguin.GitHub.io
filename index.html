@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      // To be seen...
-    </script>
-  </head>
-  <body>
-    <p>You were problably redirected here by <a href="https://forum.gethopscotch.com">The Hopscotch Forum</a><br>Me, <a href="https://forum.gethopscotch.com/u/AGMPenguin/summary">AGMPenguin</a>, and my brother, <a href="https://forum.gethopscotch.com/u/CDMTurtle/summary">CDMTurtle</a>, made a website called <a href="http://mineprisons.com">minprisons</a>.</p>
-  </body>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+console.log(" _         __\n/ \\       |  |\n  |    _  |  |\n__|__ |_| |__|");
+var a;
+var b;
+var c;
+function calc(){
+a = $("#display").val();
+if(a.includes("+")){
+b = a.indexOf("+");
+c = parseInt(a.substr(0,b))+parseInt(a.substr(b+1,a.length));
+alert(c);
+} else if(a.includes("-")){
+b = a.indexOf("-");
+c = parseInt(a.substr(0,b))-parseInt(a.substr(b+1,a.length));
+alert(c);
+} else if(a.includes("*")){
+b = a.indexOf("*");
+c = parseInt(a.substr(0,b))*parseInt(a.substr(b+1,a.length));
+alert(c)
+} else if(a.includes("/")){
+b = a.indexOf("/");
+c = parseInt(a.substr(0,b))/parseInt(a.substr(b+1,a.length));
+alert(c)
+}
+}
+</script>
+</head>
+<body>
+<input id="display" placeholder="0" readonly>
+<br>
+<button type="button" id="i1" onclick="$('#display').val($('#display').val()+'1')">1</button>
+<button type="button" id="i2" onclick="$('#display').val($('#display').val()+'2')">2</button>
+<button type="button" id="i3" onclick="$('#display').val($('#display').val()+'3')">3</button>
+<button type="button" id="i+" onclick="$('#display').val($('#display').val()+'+')">+</button>
+<button type="button" id="i-" onclick="$('#display').val($('#display').val()+'-')">-</button>
+<br>
+<button type="button" id="i4" onclick="$('#display').val($('#display').val()+'4')">4</button>
+<button type="button" id="i5" onclick="$('#display').val($('#display').val()+'5')">5</button>
+<button type="button" id="i6" onclick="$('#display').val($('#display').val()+'6')">6</button>
+<button type="button" id="i*" onclick="$('#display').val($('#display').val()+'*')">*</button>
+<button type="button" id="i/" onclick="$('#display').val($('#display').val()+'/')">/</button>
+<br>
+<button type="button" id="i7" onclick="$('#display').val($('#display').val()+'7')">7</button>
+<button type="button" id="i8" onclick="$('#display').val($('#display').val()+'8')">8</button>
+<button type="button" id="i9" onclick="$('#display').val($('#display').val()+'9')">9</button>
+<button type="button" id="cancel" onclick="$('#display').val('')">cancel</button>
+<br>
+<button style="width: 78.2375px" type="button" id="i0" onclick="$('#display').val($('#display').val()+'0')">0</button>
+<button type="button" id="enter" onclick="calc()">enter</button>
+</body>
 </html>
